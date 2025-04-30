@@ -1,5 +1,5 @@
 :root {
-    --header-height: 3rem;
+    --header-height: 5rem;
     --font-semi: 600;
     --font-bold: 700;
 
@@ -47,7 +47,7 @@ html {
 }
 
 body {
-    /* margin: var(--header-height) 0 0 0; */
+    margin: var(--header-height) 0 0 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     color: var(--dark-color);
@@ -145,17 +145,6 @@ img {
 
 .nav__link:hover {
     color: var(--first-color);
-}
-
-.nav__logo{
-
-    
-}
-
-.nav__cart {
-    font-size: 1.5rem;
-    margin-right: var(--mb-2);
-    /* cursor: pointer; */
 }
 .nav__toggle{
     font-size: 1.5rem;
@@ -456,23 +445,26 @@ img {
     }
     .section-all {
         margin-bottom: var(--mb-4);
-    }
-    .nav {
-        height: calc(var(--header-height) + 1rem);
-        justify-content: initial;
-    }
-    .nav__menu {
-        margin-left: auto;
         
-        justify-content: center;
     }
-    .nav__list {
+    /* .nav {
+         display: flex; 
+         justify-content: center; 
+         align-items: center;
+         flex-wrap:wrap ; 
+         gap: 2rem; 
+    }  */
+     /* .nav__menu {
+         justify-content: center; 
+    }  */
+    /* .nav__list {
         display: flex;
-    }
-    .nav__item {
+        
+    } */
+    /* .nav__item {
         margin-left: var(--mb-4);
         margin-bottom: 0;
-    }
+    }  */
     .nav__toggle{
         display: none;
        
@@ -535,6 +527,6 @@ img {
     }
 }
 .main-logo{
-    max-width: 100px;
-    height: auto;
+    width: auto;
+    height: var(--header-height);
 }
