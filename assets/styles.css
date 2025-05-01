@@ -1,17 +1,19 @@
 :root {
     --header-height: 5rem;
+    --font-light:400;
     --font-semi: 600;
     --font-bold: 700;
 
-    --first-color: red;
+    --first-color: rgb(255, 0, 0);
     --first-color-alt: blue;
     --white-color: #ffffff;
     --dark-color: #000000;
     --dark-color-light: #2f2f2f;
     --gray-color: #F2F2F7;
 
-    /* --body-font: 'Playfair Display', serif; */
+    --title-font: 'Playfair Display', serif;
     --body-font:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --header-font:'Roboto', sans-serif;
 
     --big-font-size: 3rem;
     --h1-font-size: 1.5rem;
@@ -110,15 +112,18 @@ img {
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: var(--white-color);
+    background-color: var(--dark-color);
 }
 
 /* --------- NAVIGATION --------- */
 .nav {
     height: var(--header-height);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 0; 
+    background-color: var(--dark-color);
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -139,8 +144,10 @@ img {
 }
 
 .nav__link {
-    color: var(--dark-color);
+    color: var(--white-color);
     font-weight: var(--font-semi);
+    font-family: var(--header-font)
+    font-weight: var(--font-light)
 }
 
 .nav__link:hover {
@@ -173,6 +180,7 @@ img {
 }
 
 .home__title {
+    font-family: var(--title-font) ;
     align-self: center;
     font-size: var(--big-font-size);
     line-height: 1;
@@ -447,24 +455,24 @@ img {
         margin-bottom: var(--mb-4);
         
     }
-    /* .nav {
+    nav {
          display: flex; 
          justify-content: center; 
          align-items: center;
          flex-wrap:wrap ; 
-         gap: 2rem; 
+         gap: 0; 
     }  */
-     /* .nav__menu {
+    .nav__menu {
          justify-content: center; 
-    }  */
-    /* .nav__list {
+    } 
+    .nav__list {
         display: flex;
         
-    } */
-    /* .nav__item {
+    }
+    .nav__item {
         margin-left: var(--mb-4);
         margin-bottom: 0;
-    }  */
+    } 
     .nav__toggle{
         display: none;
        
