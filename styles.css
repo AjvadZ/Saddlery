@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+.container {
+  max-width: 480px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+header h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+nav {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+
+.nav-group {
+  margin-bottom: 2rem;
+}
+
+.nav-group span {
+  font-style: italic;
+}
+
+.horse-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.horse-image img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
