@@ -99,7 +99,9 @@ nav {
   flex-direction: column;
   gap: 0rem;
 }
-
+.contact-links {
+  color: white;
+}
 .contact-form label {
   margin: 1rem 0 0.5rem;
   font-weight: 300;
@@ -135,7 +137,7 @@ nav {
 
 /* === Footer === */
 footer {
-  margin-top: 3rem;
+  margin-top: 1rem;
   font-size: 0.8rem;
   text-align: center;
   color: #ccc;
