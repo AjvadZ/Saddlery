@@ -99,8 +99,11 @@ nav {
   flex-direction: column;
   gap: 0rem;
 }
+
 .contact-links {
   color: white;
+  text-decoration: none;
+
 }
 .contact-form label {
   margin: 1rem 0 0.5rem;
@@ -197,3 +200,21 @@ section {
   min-height: auto;
   gap: 0.5rem;
 }
+
+  /* Ensure contact section can grow beyond viewport height if needed */
+  .contact.dark-section {
+    min-height: auto;
+    height: auto;
+  }
+
+  /* Force footer to always be visible below the form */
+  .contact footer {
+    margin-top: 2rem;
+  }
+
+  /* Prevent phone number from appearing blue and clickable on iOS */
+  .contact-links a,
+  .contact-links {
+    color: white;
+    text-decoration: none;
+  }
