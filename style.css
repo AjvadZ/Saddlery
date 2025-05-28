@@ -55,13 +55,33 @@ nav {
 }
 
 /* === Hero Image === */
-.horse-image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  margin-bottom: 2rem;
+/* Adjust layout to prevent hero image from overlapping text on iPhones */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto; /* let content define height */
+  position: relative;
 }
+
+.hero-content {
+  z-index: 2;
+  padding-bottom: 1rem;
+}
+
+.horse-image {
+  position: relative;
+  z-index: 1;
+  margin-top: 1rem;
+}
+
+.horse-image img {
+  max-height: 350px;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+}
+
 
 /* === About Section === */
 .about-section {
