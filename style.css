@@ -85,21 +85,18 @@ nav {
 
 /* === Contact Info === */
 .contact-info p {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   font-size: 1rem;
 }
 
-.social img {
-  width: 24px;
-  height: 24px;
-  margin-top: 1rem;
-}
+
 
 /* === Contact Form === */
 .contact-form {
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
+  gap: 0rem;
 }
 
 .contact-form label {
@@ -189,4 +186,11 @@ section {
 .about,
 .contact {
   padding: 2rem 1.5rem;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  min-height: auto;
+  gap: 0.5rem;
 }
