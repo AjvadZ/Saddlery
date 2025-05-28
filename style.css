@@ -144,4 +144,40 @@ footer {
   background-color: #000;
   color: #fff;
 }
+/* Full-height section layout */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hero image sticks to bottom edge */
+.hero {
+  position: relative;
+}
+
+.hero-content {
+  padding: 2rem 1.5rem;
+}
+
+.horse-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.horse-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* About & Contact still styled like before */
+.about,
+.contact {
+  padding: 2rem 1.5rem;
+}
 
