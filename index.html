@@ -8,80 +8,82 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- === HERO SECTION === -->
-  <section class="hero light-section">
-    <div class="hero-content">
-      <header>
-        <h1>Stallions<br>International</h1>
-      </header>
-      <nav>
-        <div class="nav-group">
-          <p>Credibility <span>//</span></p>
-          <p>About Us</p>
-        </div>
-        <div class="nav-group">
-          <p>Collection <span>//</span></p>
-          <p>Contact</p>
-        </div>
-      </nav>
-    </div>
-    <div class="horse-image">
-      <img src="main-img2.jpg" alt="Horse close-up" />
-    </div>
-  </section>
-
-  <!-- === ABOUT SECTION === -->
-  <section class="about light-section">
-    <main class="about-section">
-      <h1>ABOUT US <span>//</span></h1>
-      <p>
-        Our family business originated in 1977 when the now deceased Mr. Javed Alam commenced the production and exportation of leather and non-leather saddlery, harnesses, and pet products.
-      </p>
-      <p>
-        In 1988, he went on to establish Eastern Saddlery. Nowadays, Faraz Alam, his son, leads the company in its latest avatar as Leather Art.
-      </p>
-      <p>
-        We now manufacture assorted Leather goods and non Leather articles. Though the core of our business still remains manufacturing Leather Saddlery goods.
-      </p>
-    </main>
-  </section>
-
-  <!-- === CONTACT SECTION === -->
-  <section class="contact dark-section">
-    <header>
-      <h1>Stallions<br>International</h1>
-    </header>
-
-    <section class="contact-info">
-      <p>99/308 Colonel Ganj,<br>Kanpur - 208001, India</p>
-      <p>Mobile: +91-860-133-9098<br>Email: info@stallionsintl.com</p>
-      <div class="social">
-        <a href="#" aria-label="Instagram">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
-        </a>
+  <div class="slide-container">
+    <!-- === HERO SECTION === -->
+    <section class="hero light-section">
+      <div class="hero-content">
+        <header>
+          <h1>Stallions<br>International</h1>
+        </header>
+        <nav>
+          <div class="nav-group">
+            <p>Credibility <span>//</span></p>
+            <p>About Us</p>
+          </div>
+          <div class="nav-group">
+            <p>Collection <span>//</span></p>
+            <p>Contact</p>
+          </div>
+        </nav>
+      </div>
+      <div class="horse-image">
+        <img src="main-img2.jpg" alt="Horse close-up" />
       </div>
     </section>
 
-    <form class="contact-form" action="https://formspree.io/f/xanordqn" method="POST">
-      <input type="hidden" name="_captcha" value="false">
+    <!-- === ABOUT SECTION === -->
+    <section class="about light-section">
+      <main class="about-section">
+        <h1>ABOUT US <span>//</span></h1>
+        <p>
+          Our family business originated in 1977 when the now deceased Mr. Javed Alam commenced the production and exportation of leather and non-leather saddlery, harnesses, and pet products.
+        </p>
+        <p>
+          In 1988, he went on to establish Eastern Saddlery. Nowadays, Faraz Alam, his son, leads the company in its latest avatar as Leather Art.
+        </p>
+        <p>
+          We now manufacture assorted Leather goods and non Leather articles. Though the core of our business still remains manufacturing Leather Saddlery goods.
+        </p>
+      </main>
+    </section>
 
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required />
+    <!-- === CONTACT SECTION === -->
+    <section class="contact dark-section">
+      <header>
+        <h1>Stallions<br>International</h1>
+      </header>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
+      <section class="contact-info">
+        <p>99/308 Colonel Ganj,<br>Kanpur - 208001, India</p>
+        <p>Mobile: +91-860-133-9098<br>Email: info@stallionsintl.com</p>
+        <div class="social">
+          <a href="#" aria-label="Instagram">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+          </a>
+        </div>
+      </section>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+      <form class="contact-form" action="https://formspree.io/f/xanordqn" method="POST">
+        <input type="hidden" name="_captcha" value="false">
 
-      <button type="submit">Enter</button>
-    </form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
 
-    <footer>
-      <p>Copyright © 2025 Stallions International - All rights Reserved</p>
-    </footer>
-  </section>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
 
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Enter</button>
+      </form>
+
+      <footer>
+        <p>Copyright © 2025 Stallions International - All rights Reserved</p>
+      </footer>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
