@@ -4,53 +4,105 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Stallions International</title>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <meta name="format-detection" content="telephone=no">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 
 </head>
 <body>
   <div class="slide-container">
     <!-- === HERO SECTION === -->
-    <section class="hero light-section">
+    <section class="hero light-section" >
       <div class="hero-content">
         <header>
           <h1>Stallions<br>International</h1>
         </header>
         <nav>
           <div class="nav-group">
-            <p>Credibility <span>//</span></p>
-            <p>About Us</p>
-          </div>
-          <div class="nav-group">
-            <p>Collection <span>//</span></p>
-            <p>Contact</p>
+            <a href="#about">About Us <span>//</span></a>
+            <a href="#collection">Products <span>//</span></a>
+            <a href="#contact">Contact <span>//</span></a>
           </div>
         </nav>
       </div>
       <div class="horse-image">
-        <img src="main-img2 3.png" alt="Horse close-up" />
+        <!-- <img src="main-img2 3" alt="Horse close-up" /> -->
+        <img src="./hero-img.jpg" alt="Horse close-up" />
+
       </div>
     </section>
 
     <!-- === ABOUT SECTION === -->
-    <section class="about light-section">
+    <section class="about dark-section" id="about">
       <main class="about-section">
-        <h1>ABOUT US <span>//</span></h1>
+        <h1>About Us <span>//</span></h1>
         <p>
-          Our family business originated in 1977 when the now deceased Mr. Javed Alam commenced the production and exportation of leather and non-leather saddlery, harnesses, and pet products.
+          At Stallions International, we manufacture one of the best equestrian products in the world. 
+          We are the same Master Saddlers who bring to you the world-class Leather Goods from <a href="http://www.easternsaddlery.com/">Eastern Saddlery</a> and the significantly recognized <a href="https://leatherart.in/">Leather Art</a>.
         </p>
         <p>
-          In 1988, he went on to establish Eastern Saddlery. Nowadays, Faraz Alam, his son, leads the company in its latest avatar as Leather Art.
+          At Stallions International, you'll find products of unparalleled quality, built on a foundation of premium raw materials and master craftsmanship. 
+          Our dedication to excellence is evident in our carefully managed production environment and comprehensive quality control, guaranteeing products that consistently meet international benchmarks. 
+          We deeply value the partnership between a rider and their horse, which is why our designs uniquely focus on the comfort and performance benefits for both.
         </p>
-        <p>
-          We now manufacture assorted Leather goods and non Leather articles. Though the core of our business still remains manufacturing Leather Saddlery goods.
-        </p>
+        
       </main>
     </section>
 
+    <!-- === Collection Section === -->
+     <section class="px-6 light-section collection" id="collection">
+    <div class="max-w-screen-sm mx-auto">
+      <h1 class="text-5xl font-light tracking-wide" style="margin-bottom:40px;">Collection <span class="italic">//</span></h1>
+      <ul class="mt-6">
+        <li>
+          <a href="#" class="inline-flex items-start text-black font-sans font-normal text-2xl">
+            Head Collars
+            <i class="bi bi-arrow-up-right text-black text-sm ml-[2px] mt-[-6px]"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="inline-flex items-start text-black font-sans font-normal text-2xl">
+            Saddle Pads
+            <i class="bi bi-arrow-up-right text-black text-sm ml-[2px] mt-[-6px]"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="inline-flex items-start text-black font-sans font-normal text-2xl">
+            Leather Bags
+            <i class="bi bi-arrow-up-right text-black text-sm ml-[2px] mt-[-6px]"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="inline-flex items-start text-black font-sans font-normal text-2xl">
+            Bridles
+            <i class="bi bi-arrow-up-right text-black text-sm ml-[2px] mt-[-6px]"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a href="#" class="inline-flex items-start text-black font-sans font-normal text-2xl">
+            Rugs
+            <i class="bi bi-arrow-up-right text-black text-sm ml-[2px] mt-[-6px]"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
     <!-- === CONTACT SECTION === -->
-    <section class="contact dark-section">
+    <section class="contact dark-section" id="contact">
       <header>
         <h1>Stallions<br>International</h1>
       </header>
