@@ -8,13 +8,6 @@
   <meta name="format-detection" content="telephone=no">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 
 </head>
@@ -28,16 +21,14 @@
         </header>
         <nav>
           <div class="nav-group">
-            <a href="#about">About Us <span>//</span></a>
-            <a href="#collection">Collection <span>//</span></a>
+            <a href="#about">About Us <span>// </span></a>
+            <a href="#collection">Collection <span> //</span></a>
             <a href="#contact">Contact <span>//</span></a>
           </div>
         </nav>
       </div>
       <div class="horse-image">
-        <!-- <img src="main-img2 3" alt="Horse close-up" /> -->
-        <img src="./hero-img.jpg" alt="Horse close-up" />
-
+        <img src="./assets/main-img-desktop.jpg" alt="" id="main-img"/>
       </div>
     </section>
 
@@ -60,42 +51,42 @@
 
     <!-- === Collection Section === -->
      <section class="light-section collection" id="collection">
-    <div class="">
-      <h1 class="text-5xl font-light tracking-wide" style="margin-bottom:40px;">Collection <span class="italic">//</span></h1>
-      <ul class="mt-6">
+    <div class="collection-section">
+      <h1 class="">Collection <span class="italic">//</span></h1>
+      <ul class="">
         <li>
-          <a href="#" class="inline-flex items-start text-black font-sans font-normal text-2xl">
+          <button onclick="renderProducts('headCollars')"> 
             Head Collars
-            <i class="bi bi-arrow-up-right text-black text-sm ml-[2px] mt-[-6px]"></i>
+            <i class="bi bi-arrow-up-right text-black text-sm ml-[2px] mt-[-8px]"></i>
           </a>
+          </button>
         </li>
 
         <li>
-          <a href="#" class="inline-flex items-start text-black font-sans font-normal text-2xl">
+        <button onclick="renderProducts('saddlepads')"> 
             Saddle Pads
-            <i class="bi bi-arrow-up-right text-black text-sm ml-[2px] mt-[-6px]"></i>
-          </a>
+            <i class="bi bi-arrow-up-right text-black text-sm ml-[2px] mt-[-8px]"></i>
+          </button>
         </li>
 
         <li>
-          <a href="#" class="inline-flex items-start text-black font-sans font-normal text-2xl">
+         <button onclick="renderProducts('leatherBags')"> 
             Leather Bags
             <i class="bi bi-arrow-up-right text-black text-sm ml-[2px] mt-[-6px]"></i>
-          </a>
+          </button>
         </li>
 
         <li>
-          <a href="#" class="inline-flex items-start text-black font-sans font-normal text-2xl">
+           <button onclick="renderProducts('bridles')"> 
             Bridles
             <i class="bi bi-arrow-up-right text-black text-sm ml-[2px] mt-[-6px]"></i>
-          </a>
+          </button>
         </li>
-        
         <li>
-          <a href="#" class="inline-flex items-start text-black font-sans font-normal text-2xl">
+          <button onclick="renderProducts('rugs')"> 
             Rugs
             <i class="bi bi-arrow-up-right text-black text-sm ml-[2px] mt-[-6px]"></i>
-          </a>
+          </button>
         </li>
       </ul>
     </div>
@@ -103,48 +94,50 @@
 
     <!-- === CONTACT SECTION === -->
     <section class="contact dark-section" id="contact">
-      <header>
-        <h1>Stallions<br>International</h1>
-      </header>
 
-      <section class="contact-info">
-        <p>99/308 Colonel Ganj,<br>Kanpur - 208001, India</p>
-        <p class="contact-links">
-          Mobile: <a href="tel:+918601339098">+91-860-133-9098</a><br>
-          Email: <a href="mailto:info@stallionsintl.com">info@stallionsintl.com</a>
-        </p>
+    <section class="contact-info">
 
-        <div class="social">
-          <a href="https://www.instagram.com/stallionsintl?igsh=MTJqcWZ5bGozZjZmag==" aria-label="Instagram">
-            <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" /> -->
-             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="100" viewBox="0 0 50 50" fill="#fff">
-                  <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"></path>
-            </svg>
-          </a>
+        <div class="left-grid">
+            <header>
+              <h1 class="contact-header">Stallions<br>International</h1>
+            </header>
+            <p>99/308 Colonel Ganj,<br>Kanpur - 208001, India</p>
+            <p class="contact-links">
+              Mobile: <a href="tel:+918601339098">+91-860-133-9098</a><br>
+              Email: <a href="mailto:info@stallionsintl.com">info@stallionsintl.com</a>
+            </p>
+
+            <div class="social">
+              <a href="https://www.instagram.com/stallionsintl?igsh=MTJqcWZ5bGozZjZmag==" aria-label="Instagram">
+                <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" /> -->
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="100" viewBox="0 0 50 50" fill="#fff">
+                      <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"></path>
+                </svg>
+              </a>
+            </div>
         </div>
-      
 
-      <form class="contact-form" action="https://formspree.io/f/xanordqn" method="POST">
-        <input type="hidden" name="_captcha" value="false">
+        <div class="right-grid">
+        <form class="contact-form" action="https://formspree.io/f/xanordqn" method="POST">
+          <input type="hidden" name="_captcha" value="false">
 
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required />
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
 
-        <button type="submit">Enter</button>
-      </form>
-
-      <footer>
-        <p>Copyright © 2025 Stallions International - All rights Reserved</p>
-      </footer>
+          <button type="submit">Enter</button>
+        </form>
+      </div>
     </section>
-  </div>
+    <p class="footer-text">Copyright © 2025 Stallions International - All rights Reserved</p>
 
-  <script src="script.js"></script>
+   
+    
+    <script src="main.js"></script>
 </body>
 </html>

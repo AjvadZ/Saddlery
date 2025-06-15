@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* === Global Reset === */
 * {
   margin: 0;
@@ -7,52 +8,60 @@
 
 html, body {
   height: 100%;
-  /* overflow: hidden; Prevent default scrolling */
-   overflow: auto;
+  width: 100%;
+  background-color: white;
+  overflow: auto;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   background-color: #000;
   color: #fff;
-   font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.6;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+
 }
 
 /* Slide Container */
 .slide-container {
-  height: 100vh; /* Full viewport height */
-  overflow-y: scroll; /* Enable vertical scrolling */
-  scroll-snap-type: y mandatory; /* Enable snap scrolling */
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 /* === Section Styles === */
 section {
-  height: 100vh; /* Each section takes full height */
-  scroll-snap-align: start; /* Snap to the start of each section */
+  height: 100vh;
+  scroll-snap-align: start;
 }
 
 /* === Header === */
 header h1 {
-  font-family: "Luxurious Script", cursive, sans-serif;
   font-size: 4rem;
-  line-height: 0.8;
-  margin-bottom: 2rem;
+  line-height: 1;
 }
-
+header {
+  margin: 0 auto;
+}
 /* === Navigation === */
 nav {
   font-size: 1.5rem;
   font-weight: 300;
-  margin-bottom: 2rem;
+    position: relative; /* Ensure it's positioned */
+  z-index: 20; /* Higher z-index than the hero image */
 }
 
 .nav-group {
-  margin-bottom: 1rem;
   display: flex;
-  flex-direction: column;
-  font-family: 'Poppins', sans-serif; /* Poppins is the primary font, sans-serif is a fallback */
+  flex-direction: row;
+  font-family: 'Poppins', sans-serif;
   font-weight: 275;
   font-style: normal; 
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.8rem;
 }
 
 .nav-group span {
@@ -62,47 +71,58 @@ nav {
 .nav-group a{
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* === Hero Image === */
-/* Adjust layout to prevent hero image from overlapping text on iPhones */
 .hero {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: auto; /* let content define height */
-  position: relative;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  z-index: 1;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left bottom;
+  z-index: 0;
 }
 
 .hero-content {
-  z-index: 2;
-  padding-bottom: 1rem;
-  background: linear-gradient(rgb(186, 186, 186), rgb(240,240,240));
-  height: calc(100vh - 350px);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  z-index: 10;
+  color: black;
+  box-sizing: border-box;
+  max-width: 90%;
+  
 }
 
-.horse-image {
-  position: relative;
-  z-index: 1;
-  margin-top: 1rem;
-}
-
-.horse-image img {
-  max-height: 350px;
-  width: auto;
-  margin: 0 auto;
-  display: block;
-}
-
-
-/* === About Section === */
 .about-section {
-  margin-bottom: 3rem;
+  margin: 2rem;
 }
 
 .about-section h1 {
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1.2rem;
 }
 
@@ -110,24 +130,49 @@ nav {
   font-style: italic;
 }
 
-
 .about-section p {
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 .about-section p a {
-    text-decoration: underline;
+  text-decoration: underline;
+  color: white;
 }
-/* === Contact Info === */
+/* === COLLECTION SECTION === */
+.collection-section {
+  margin: 2rem 2rem 0 2rem;
+}
+.collection-section > h1 {
+  margin-bottom: 1.2rem;
+  font-weight: 300;
+  font-size: 3rem;
+} 
+.collection-section  ul  button {
+  background: none;
+  border: none;
+  margin: 0.3rem;
+  font-family: inherit;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.italic {
+  font-style: italic;
+}
+li {
+  border-top: 1px solid #a3a3a3;
+  border-bottom: 1px solid #a3a3a3;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+/* === CONTACT SECTION */
+
 .contact-info p {
-  /* margin-bottom: 1rem; */
   font-size: 1rem;
+  
 }
 
-
-
-/* === Contact Form === */
 .contact-form {
   margin-top: 0.5rem;
   display: flex;
@@ -138,7 +183,6 @@ nav {
 .contact-links {
   color: white;
   text-decoration: none;
-
 }
 .contact-form label {
   margin: 1rem 0 0.5rem;
@@ -149,12 +193,13 @@ nav {
 .contact-form textarea {
   background: none;
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 0.5em solid #fff;
   color: #fff;
   padding: 0.5rem 0;
   font-size: 1rem;
   font-family: inherit;
   outline: none;
+
 }
 
 .contact-form button {
@@ -173,26 +218,23 @@ nav {
   background-color: #777;
 }
 
-/* === Footer === */
 footer {
-  margin-top: 1rem;
+  margin-bottom: 1rem;
   font-size: 0.8rem;
   text-align: center;
   color: #ccc;
 }
 
-/* Background Themes */
 .light-section {
   background-color: #fff;
-  color: #000;
+  color: #191919;
 }
 
 .dark-section {
-  background-color: #000;
+  background-color: #191919;
   color: #fff;
 }
 
-/* Full-height section layout */
 section {
   min-height: 100vh;
   display: flex;
@@ -200,74 +242,189 @@ section {
   justify-content: space-between;
 }
 
-/* Hero image sticks to bottom edge */
-.hero {
-  position: relative;
-}
-
-.hero-content {
-  padding: 2rem 1.5rem;
-}
-
-.horse-image {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.horse-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* About & Contact still styled like before */
-.about,
-.contact,
-.collection {
-  padding: 2rem 1.5rem;
-}
 .contact-info {
   display: flex;
   flex-direction: column;
   justify-content: start;
   min-height: auto;
   gap: 0.5rem;
-  
 }
 
-  /* Ensure contact section can grow beyond viewport height if needed */
 .contact.dark-section {
-    min-height: auto;
+  min-height: auto;
+  height: auto;
+}
+
+.contact footer {
+  margin-top: 2rem;
+}
+
+.contact-links a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+a{
+  padding: 15px 0px;
+  color: #000;
+}
+.footer-text{
+  text-align: center;
+  margin: 4rem 2rem;
+  display: block;
+ }
+
+@media (max-width: 767px) {
+  /* Your mobile styles here */
+  .hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: env(safe-area-inset-top); /* Add safe area inset */
+    padding-bottom: env(safe-area-inset-bottom); /* Add safe area inset */
+  
+}
+.horse-image{
+  width: 100%;
+}
+.hero img {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+  object-position: center;
+}
+header h1{
+  font-size: 2.5rem;
+  
+}
+header{
+  margin: 0;
+  margin-bottom: 1rem;
+}
+.hero-content {
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;  
+  z-index: 10;
+  color: black;
+  box-sizing: border-box;
+  max-width: 90%;
+  margin: 2rem 2rem;
+}
+
+.nav-group{
+  flex-direction: column;
+  gap: 0em;
+  line-height: 1.6;
+}
+.collection-section {
+  flex-wrap: wrap;
+}
+.collection-section ul button {
+    font-size: 0.8em;
+  }
+  .about-section > h1 {
+    font-size: 2.5rem;
+  }
+  .about-section p{
+    font-size: 1rem;
+  }
+  .collection-section > h1 {
+    font-size: 2.5rem;
+  }.collection-section  ul  button {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+li {
+  margin-bottom: 2rem;
+}
+.contact.dark-section{
+  flex-wrap: wrap;
+}
+}
+@media (min-width: 900px) {
+  .contact-header {
+    margin: 0;
+    margin-bottom: 1rem;
+    background-color: white;
+    color: #191919;
+  }
+  .contact-links{
+    margin-top: 1rem;
+  }
+  .left-grid header {
+    margin: 0;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: row;
+    /* gap: 1rem; */
+    width: auto;
+    box-sizing: border-box;
     height: auto;
-  }
+}
 
-  /* Force footer to always be visible below the form */
-  .contact footer {
-    margin-top: 2rem;
-  }
+.left-grid,
+.right-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.right-grid input,
+.right-grid textarea {
 
-  /* Style phone number link to be white and still clickable */
-  .contact-links a {
-    color: white;
-    text-decoration: none;
-  }
-  /* === COLLECTION SECTION */
+  max-width: 500px;
+  width: 100%;
+}
+.contact-form button {
 
-   li {
-      border-top: 1px solid #a3a3a3;    /* add top border */
-      border-bottom: 1px solid #a3a3a3; /* keep bottom border */
-      margin-bottom: 50px; /* space after the border */
-      padding: 0;
-    }
-    
-    ul {
-      padding-bottom: 50px; /* Add space below the last border */
-    }
-    a{
-      padding: 15px 0px;
-      color: #000;
-    }
- 
+  width: 450px;
+}
+.right-grid {
+  align-items: center;
+  
+}
+ .contact-info {
+  justify-content: start;
+  width: 90%;
+ }
+ .contact-header {
+  font-size: 2rem;
+ }
+  
+}
+.bi {
+
+  vertical-align: 0.6em;
+}
+
+.contact-info {
+  margin: 2rem 2rem;
+}
+.contact-header {
+  margin-bottom: 1rem;
+}
+.contact-links {
+  margin-top: 1rem;
+ }
+
+ .contact-info {
+  justify-content: space-around;
+ }
