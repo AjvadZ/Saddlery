@@ -202,6 +202,7 @@ li {
 
 }
 
+
 .contact-form button {
   margin-top: 2rem;
   padding: 0.75rem;
@@ -243,15 +244,15 @@ section {
 }
 
 .contact-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
   min-height: auto;
-  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  
 }
 
 .contact.dark-section {
-  min-height: auto;
+  min-height: 100vh;
   height: auto;
 }
 
@@ -272,7 +273,7 @@ a{
 }
 .footer-text{
   text-align: center;
-  margin: 4rem 2rem;
+  margin: .8rem 2rem;
   display: block;
  }
 
@@ -358,7 +359,12 @@ li {
 .contact.dark-section{
   flex-wrap: wrap;
 }
+.contact-info{
+  display: block;
+
 }
+}
+/*
 @media (min-width: 900px) {
   .contact-header {
     margin: 0;
@@ -375,7 +381,7 @@ li {
   .contact-info {
     display: flex;
     flex-direction: row;
-    /* gap: 1rem; */
+    gap: 1rem;
     width: auto;
     box-sizing: border-box;
     height: auto;
@@ -410,6 +416,7 @@ li {
  }
   
 }
+*/
 .bi {
 
   vertical-align: 0.6em;
@@ -424,7 +431,25 @@ li {
 .contact-links {
   margin-top: 1rem;
  }
+.slide-container {
+  overflow-y: auto;
+  scroll-snap-type: y proximity;
+  height: auto;
+  max-height: none;
+}
 
- .contact-info {
-  justify-content: space-around;
- }
+section {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+.hero,
+.about,
+.collection {
+  height: 100vh;
+}
+
+.contact {
+  height: auto !important;
+  scroll-snap-align: none;
+}
