@@ -17,22 +17,22 @@
 //   event.preventDefault(); // Prevent default scrolling
 // }, { passive: false } );
 
-window.addEventListener('resize', changeImage)
+
 function renderProducts(category){
     window.location.href = `productsList.html?category=${encodeURIComponent(category)}`
 }
 
-function changeImage(){
-    const imageEl = document.getElementById('main-img')
-    const windowWidth = window.innerWidth;
-    console.log(windowWidth)
+// function changeImage(){
+//     const imageEl = document.getElementById('main-img')
+//     const windowWidth = window.innerWidth;
+//     console.log(windowWidth)
 
-    if(windowWidth < 767){
-        imageEl.src = './assets/hero-img.jpg'
-    }else{
-        imageEl.src = './assets/main-img-desktop.jpg'
+//     if(windowWidth < 767){
+//         imageEl.src = './assets/hero-img.jpg'
+//     }else{
+//         imageEl.src = './assets/main-img-desktop.jpg'
 
-    }
-}
+//     }
+// }
 
-window.addEventListener('resize', changeImage)
+// window.addEventListener('resize', changeImage)
